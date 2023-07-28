@@ -1,0 +1,58 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+/* Add this CSS to your existing CSS file or use styled-components in React */
+
+/* Styling for the word search grid */
+.word-search-grid {
+  display: grid;
+  grid-template-columns: repeat(var(--x), 40px);
+  grid-template-rows: repeat(var(--y), 40px);
+  gap: 2px;
+  background-color: #f1f1f1;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Individual cell style */
+.cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  background-color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+/* found cell style */
+.cell.found {
+  background-color: green; /* Light blue */
+  animation: highlight 1s ease-in-out;
+}
+
+.cell.debug {
+  color: red;
+}
+
+/* Selected cell style */
+.cell.selected {
+  background-color: #b3d9ff; /* Lighter blue */
+}
+
+/* Animation to add a pulse effect on highlighting */
+@keyframes highlight {
+  0%,
+  100% {
+    background-color: green;
+  }
+  50% {
+    background-color: lightgreen;
+  }
+}
+
+/* Add more styles as needed */
